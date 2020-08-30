@@ -61,7 +61,12 @@ Using this as a Terraform module allows integration with your existing Terraform
 
 ```hcl
 module "samproxy" {
-  source = "git@github.com:vlaaaaaaad/terraform-aws-fargate-samproxy.git?ref=main"
+  # use git to pull the module from GitHub, the latest version
+  # source = "git@github.com:vlaaaaaaad/terraform-aws-fargate-samproxy.git?ref=main"
+  # or
+  # Pull a specific version from Terraform Module Registry
+  source  = "Vlaaaaaaad/fargate-samproxy/aws"
+  version = "0.0.1"
 
   # REQUIRED: DNS (without trailing dot)
   route53_zone_name = "example.com"
