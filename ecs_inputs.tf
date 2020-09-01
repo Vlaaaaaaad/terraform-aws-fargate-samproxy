@@ -34,7 +34,7 @@ variable "image_repository" {
 
 variable "image_tag" {
   description = "The Samproxy image tag to use"
-  default     = "v0.8.0"
+  default     = "v0.9.0"
 }
 
 variable "image_repository_credentials" {

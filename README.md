@@ -66,7 +66,7 @@ module "samproxy" {
   # or
   # Pull a specific version from Terraform Module Registry
   source  = "Vlaaaaaaad/fargate-samproxy/aws"
-  version = "0.0.1"
+  version = "0.0.2"
 
   # REQUIRED: DNS (without trailing dot)
   route53_zone_name = "example.com"
@@ -176,7 +176,7 @@ Using this module also allows integration with existing AWS resources -- VPC, Su
 | firelens_configuration | The FireLens configuration for the Samproxy container. This is used to specify and configure a log router for container logs. See [AWS Docs](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_FirelensConfiguration.html) | <pre>object({<br>    type    = string<br>    options = map(string)<br>  })</pre> | `null` | no |
 | image_repository | The Samproxy image repository | `string` | `"vlaaaaaaad/samproxy-fargate-image"` | no |
 | image_repository_credentials | The container repository credentials; required when using a private repo.  This map currently supports a single key; `"credentialsParameter"`, which should be the ARN of a Secrets Manager's secret holding the credentials | `map(string)` | `null` | no |
-| image_tag | The Samproxy image tag to use | `string` | `"v0.8.0"` | no |
+| image_tag | The Samproxy image tag to use | `string` | `"v0.9.0"` | no |
 | name | The name to use on all resources created (VPC, ALB, etc) | `string` | `"samproxy"` | no |
 | redis_node_type | The instance type used for the Redis cache cluster. See [all available values on the AWS website](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html) | `string` | `"cache.t2.micro"` | no |
 | redis_port | The Redis port | `string` | `"6379"` | no |
