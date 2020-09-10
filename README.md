@@ -99,7 +99,7 @@ module "samproxy" {
         },
         {
           "name"  = "FieldList"
-          "value" = "['app.run']"
+          "value" = "['request.method', 'response.status_code']"
         },
         {
           "name"  = "UseTraceLength"
